@@ -11,12 +11,24 @@ func stringToInt(userString: String) -> Int {
 stringToInt("88")
 
 //Write a function that takes in a tuple (code, message) and returns a string by using interpolation
+//Wrong
 
-func errorAlert(code: Int, message: String) -> String {
+//func errorAlert(code: Int, message: String) -> String {
+//    return ("Error code \(code): \(message)")
+//}
+//
+//errorAlert(13, message: "It's a lion, get in the car!")
+
+//Correct would have looked like this:
+
+func errorAlert(tuple: (code: Int, message: String)) -> String {
+    let (code, message) = tuple
     return ("Error code \(code): \(message)")
 }
 
-errorAlert(13, message: "It's a lion, get in the car!")
+let error = (code: 13, message: "It's a lion, get in the car!")
+
+errorAlert(error)
 
 //Write a function that take in a string, and returns a message: “String contains n characters”
 
