@@ -25,7 +25,10 @@ earthAdder(&awesomePlanets)
 
 //Use reduce to create single string from the above array. [“Venus”, “Earth”] would produce “Venus, Earth”
 
+let planets = ["Venus", "Earth", "Uranus"]
 
+let planetString = planets.reduce("", combine: {$0 == "" ? $1 : $0 + ", " + $1})
+print (planetString)
 
 //Declare and implement a dictionary that can contain as values Strings, Ints, etc
 
@@ -56,6 +59,8 @@ let exclusiveFlavors = gum.exclusiveOr(iceCream)
 
 //Write a function that counts repeating words and prints out the count of each
 
+//iterate through each word. If it's in the dictionary, increment the value by 1. If it's not in the dictionary, add it and set the value to 0. At the end, loop through dictionary and print out all values greater than 0.
+
 //func wordCounter(userWords: [String]) {
 //    var wordDict = [String: Int]()
 //    for word in userWords {
@@ -69,8 +74,8 @@ let exclusiveFlavors = gum.exclusiveOr(iceCream)
 //        uniqueWords.insert(word)
 //    }
 //}
-//
-//let randomWords = ["beer", "fort", "beer", "olive", "mule", "cup", "olive", "green"]
+
+let randomWords = ["beer", "fort", "beer", "olive", "mule", "cup", "olive", "green"]
 
 //Add two numbers without using “+”
 
