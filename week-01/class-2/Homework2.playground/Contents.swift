@@ -56,6 +56,40 @@ let exclusiveFlavors = gum.exclusiveOr(iceCream)
 
 //Write a function that counts repeating words and prints out the count of each
 
+//func wordCounter(userWords: [String]) {
+//    var wordDict = [String: Int]()
+//    for word in userWords {
+//        for entry in wordDict {
+//            if word == entry {
+//                uniqueWords.insert(word)
+//            } else {
+//                
+//            }
+//        }
+//        uniqueWords.insert(word)
+//    }
+//}
+//
+//let randomWords = ["beer", "fort", "beer", "olive", "mule", "cup", "olive", "green"]
 
 //Add two numbers without using “+”
 
+func adder(first: Int, second: Int) -> Int {
+    var accumulator = 0
+    
+    if first > second {
+        accumulator = first
+        for _ in 0..<second {
+            accumulator += 1
+        }
+        return accumulator
+    } else {
+        accumulator = second
+        for _ in 0..<first {
+            accumulator += 1
+        }
+        return accumulator
+    }
+}
+
+adder(8, second: 4)
