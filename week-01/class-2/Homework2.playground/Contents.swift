@@ -28,7 +28,7 @@ earthAdder(&awesomePlanets)
 let planets = ["Venus", "Earth", "Uranus"]
 
 let planetString = planets.reduce("", combine: {$0 == "" ? $1 : $0 + ", " + $1})
-print (planetString)
+print(planetString)
 
 //Declare and implement a dictionary that can contain as values Strings, Ints, etc
 
@@ -40,12 +40,13 @@ cityCoolness = ["Seattle": 3, "Portland": 1, "Athens": 8, "Branson": 999]
 
 let zootopiaCharacters = [1: "Judy Hopps", 2: "Nick Wilde", 3: "Emmet Otterton"]
 
-//func dictionarySearch(searchTerm: String) -> (Key: Int, Value: String)? {
-//    let searchResult = zootopiaCharacters.filter({$0 == searchTerm})
-//    return searchResult
-//}
+func dictionarySearch(searchTerm: String) {
+    let searchResult = zootopiaCharacters.filter({let (_, matchedValue) = $0; return matchedValue == searchTerm})
+    let (key, value) = searchResult[0]
+    print("Match found! Key: \(key), Value: \(value)")
+}
 
-//dictionarySearch("Nick Wilde")
+dictionarySearch("Nick Wilde")
 
 //Write examples for union, intersect, subtract, exclusive Or set operations
 
@@ -65,8 +66,9 @@ let exclusiveFlavors = gum.exclusiveOr(iceCream)
 //    var wordDict = [String: Int]()
 //    for word in userWords {
 //        for entry in wordDict {
+//            
 //            if word == entry {
-//                uniqueWords.insert(word)
+//                wordDict.insert([word: 0])
 //            } else {
 //                
 //            }
