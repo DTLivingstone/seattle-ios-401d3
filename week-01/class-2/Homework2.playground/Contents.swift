@@ -63,21 +63,25 @@ let exclusiveFlavors = gum.exclusiveOr(iceCream)
 //iterate through each word. If it's in the dictionary, increment the value by 1. If it's not in the dictionary, add it and set the value to 0. At the end, loop through dictionary and print out all values greater than 0.
 
 //func wordCounter(userWords: [String]) {
-//    var wordDict = [String: Int]()
+//    var wordDict = ["" : 0]
 //    for word in userWords {
-//        for entry in wordDict {
-//            
-//            if word == entry {
-//                wordDict.insert([word: 0])
+//        for (key, count) in wordDict {
+//            if word != key {
+//                wordDict[word] = count
 //            } else {
-//                
+//                let newCount = count + 1
+//                print(newCount)
+//                wordDict[word] = 2
 //            }
 //        }
-//        uniqueWords.insert(word)
+//    print(wordDict)
 //    }
+//   let dupes = filter(wordDict)
+//    print(dupes)
 //}
 
-let randomWords = ["beer", "fort", "beer", "olive", "mule", "cup", "olive", "green"]
+//wordCounter(["beer", "fort", "beer", "olive", "mule", "cup", "olive", "green"])
+
 
 //Add two numbers without using “+”
 
