@@ -25,23 +25,23 @@ earthAdder(&awesomePlanets)
 
 //Use reduce to create single string from the above array. [“Venus”, “Earth”] would produce “Venus, Earth”
 
-let planets = ["Venus", "Earth", "Uranus"]
+let planets = ["Venus", "Earth", "Uranus", "Neptune"]
 
-let planetString = planets.reduce("", combine: {$0 == "" ? $1 : $0 + ", " + $1})
+let planetString = planets.reduce("", combine: {$0 != "" ? $0 + ", " + $1 : $1})
 print(planetString)
 
 //Declare and implement a dictionary that can contain as values Strings, Ints, etc
 
 var cityCoolness = [String: Int]()
 
-cityCoolness = ["Seattle": 3, "Portland": 1, "Athens": 8, "Branson": 999]
+cityCoolness = ["Minneapolis": 3, "Portland": 2, "Athens": 8, "Branson": 999]
 
 //Declare a dictionary of string values. Declare a function that takes in a string and searches dictionary for it. Use filter
 
 let zootopiaCharacters = [1: "Judy Hopps", 2: "Nick Wilde", 3: "Emmet Otterton"]
 
 func dictionarySearch(searchTerm: String) {
-    let searchResult = zootopiaCharacters.filter({let (_, matchedValue) = $0; return matchedValue == searchTerm})
+    let searchResult = zootopiaCharacters.filter({(key, matchedValue) in matchedValue == searchTerm})
     let (key, value) = searchResult[0]
     print("Match found! Key: \(key), Value: \(value)")
 }
